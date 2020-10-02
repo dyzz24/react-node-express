@@ -25,8 +25,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe457671-e905-44a2-8acd-0556c29f5cf8" name="Default Changelist" comment="added back">
+    <list default="true" id="fe457671-e905-44a2-8acd-0556c29f5cf8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-express-back/docker-compose.dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/docker-compose.dev.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,17 +69,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/node_modules/eslint/node_modules/.bin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/frontend/node_modules/eslint" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/frontend/node_modules/prettier" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/backend" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -103,6 +110,7 @@
       <workItem from="1601622367068" duration="1425000" />
       <workItem from="1601623803982" duration="2139000" />
       <workItem from="1601627842671" duration="6000" />
+      <workItem from="1601627862563" duration="1269000" />
     </task>
     <task id="LOCAL-00001" summary="added node express boilerplate">
       <created>1601371208515</created>
@@ -279,7 +287,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601627746572</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added back">
+      <created>1601627913145</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1601627913146</updated>
+    </task>
+    <task id="LOCAL-00027" summary="other files">
+      <created>1601627932971</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1601627932971</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,35 +353,37 @@
     <MESSAGE value="pull" />
     <MESSAGE value="front" />
     <MESSAGE value="added back" />
-    <option name="LAST_COMMIT_MESSAGE" value="added back" />
+    <MESSAGE value="other files" />
+    <option name="LAST_COMMIT_MESSAGE" value="other files" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3082" y="300" width="835" height="549" key="#ESLint" timestamp="1601392229131">
-      <screen x="1920" y="0" width="2560" height="1440" />
+    <state x="872" y="585" width="553" height="552" key="#ESLint" timestamp="1601629080029">
+      <screen x="0" y="360" width="1920" height="1080" />
     </state>
+    <state x="872" y="585" width="553" height="552" key="#ESLint/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601629080029" />
     <state x="3082" y="300" width="835" height="549" key="#ESLint/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601392229131" />
     <state x="2946" y="539" width="559" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601374435180">
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2946" y="539" width="559" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601374435180" />
-    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2" timestamp="1601627759744">
+    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2" timestamp="1601627932899">
       <screen x="0" y="360" width="1920" height="1080" />
     </state>
-    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601627759744" />
+    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601627932899" />
     <state x="2775" y="281" width="912" height="911" key="CommitChangelistDialog2/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601396355800" />
     <state x="100" y="460" width="1720" height="880" key="DiffContextDialog" timestamp="1601623368874">
       <screen x="0" y="360" width="1920" height="1080" />
     </state>
     <state x="100" y="460" width="1720" height="880" key="DiffContextDialog/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601623368874" />
-    <state x="824" y="731" width="374" height="369" key="FileChooserDialogImpl" timestamp="1601623280925">
+    <state x="824" y="731" width="377" height="369" key="FileChooserDialogImpl" timestamp="1601628855493">
       <screen x="0" y="360" width="1920" height="1080" />
     </state>
-    <state x="824" y="731" width="374" height="369" key="FileChooserDialogImpl/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601623280925" />
+    <state x="824" y="731" width="377" height="369" key="FileChooserDialogImpl/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601628855493" />
     <state x="3019" y="494" width="424" height="491" key="FileChooserDialogImpl/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601391946708" />
-    <state x="604" y="636" width="900" height="737" key="SettingsEditor" timestamp="1601622412574">
+    <state x="604" y="636" width="900" height="737" key="SettingsEditor" timestamp="1601629128526">
       <screen x="0" y="360" width="1920" height="1080" />
     </state>
-    <state x="604" y="636" width="900" height="737" key="SettingsEditor/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601622412574" />
+    <state x="604" y="636" width="900" height="737" key="SettingsEditor/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601629128526" />
     <state x="2725" y="368" width="1022" height="737" key="SettingsEditor/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601392132991" />
     <state x="755" y="714" width="588" height="522" key="find.popup" timestamp="1601623173410">
       <screen x="0" y="360" width="1920" height="1080" />

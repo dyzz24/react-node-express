@@ -2,5 +2,5 @@ version: '3'
 
 services:
   node-app:
-    container_name: node-app-dev
+    container_name: dyzz-node-app-dev-1
     command: yarn dev -L
