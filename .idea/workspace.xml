@@ -26,16 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe457671-e905-44a2-8acd-0556c29f5cf8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/node-express-back/src/controllers/messages.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node-express-back/src/models/messages.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node-express-back/src/routes/v1/messages.route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node-express-back/src/services/messages.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/user-info/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user-info/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-express-back/src/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/controllers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-express-back/src/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/models/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-express-back/src/routes/v1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/routes/v1/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-express-back/src/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/services/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-express-back/src/controllers/messages.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/controllers/messages.controller.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601630976979</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="messages model (in progress)">
+      <created>1601647986111</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1601647986111</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +378,8 @@
     <MESSAGE value="other files" />
     <MESSAGE value="package" />
     <MESSAGE value="configure" />
-    <option name="LAST_COMMIT_MESSAGE" value="configure" />
+    <MESSAGE value="messages model (in progress)" />
+    <option name="LAST_COMMIT_MESSAGE" value="messages model (in progress)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="872" y="585" width="553" height="552" key="#ESLint" timestamp="1601630368443">
@@ -390,10 +391,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2946" y="539" width="559" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601374435180" />
-    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2" timestamp="1601630975275">
+    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2" timestamp="1601647984420">
       <screen x="0" y="360" width="1920" height="1080" />
     </state>
-    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601630975275" />
+    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601647984420" />
     <state x="2775" y="281" width="912" height="911" key="CommitChangelistDialog2/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601396355800" />
     <state x="100" y="460" width="1720" height="880" key="DiffContextDialog" timestamp="1601623368874">
       <screen x="0" y="360" width="1920" height="1080" />
@@ -409,10 +410,10 @@
     </state>
     <state x="604" y="636" width="900" height="737" key="SettingsEditor/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601629128526" />
     <state x="2725" y="368" width="1022" height="737" key="SettingsEditor/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601392132991" />
-    <state x="755" y="714" width="588" height="522" key="find.popup" timestamp="1601630565075">
+    <state x="755" y="714" width="588" height="522" key="find.popup" timestamp="1601648244246">
       <screen x="0" y="360" width="1920" height="1080" />
     </state>
-    <state x="755" y="714" width="588" height="522" key="find.popup/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601630565075" />
+    <state x="755" y="714" width="588" height="522" key="find.popup/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601648244246" />
     <state x="2927" y="472" width="618" height="522" key="find.popup/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601387582383" />
     <state x="600" y="743" width="720" height="321" key="git4idea.ui.GitTagDialog" timestamp="1601623514149">
       <screen x="0" y="360" width="1920" height="1080" />
@@ -422,9 +423,10 @@
       <screen x="0" y="360" width="1920" height="1080" />
     </state>
     <state x="624" y="425" key="run.anything.popup/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601474096007" />
-    <state x="2899" y="349" width="672" height="678" key="search.everywhere.popup" timestamp="1601386848606">
-      <screen x="1920" y="0" width="2560" height="1440" />
+    <state x="734" y="622" width="672" height="509" key="search.everywhere.popup" timestamp="1601648027425">
+      <screen x="0" y="360" width="1920" height="1080" />
     </state>
+    <state x="734" y="622" width="672" height="509" key="search.everywhere.popup/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601648027425" />
     <state x="2899" y="349" width="672" height="678" key="search.everywhere.popup/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601386848606" />
   </component>
 </project>

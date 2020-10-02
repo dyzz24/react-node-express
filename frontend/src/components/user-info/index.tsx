@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserActions, UserContext } from '../../reducer';
 import { useCheckAuthStatus } from '../../hooks/use-check-auth-status';
-import { patch, post } from '../../http';
+import { get, post } from '../../http';
 import { UserIdService } from '../../service/user-id';
-import { IUser } from '../login-register-forms';
 import { LogoutButton } from '../logout-button';
 
 export const UserInfo = () => {
   const { state, dispatch } = useContext(UserContext);
   const { userInfo } = useCheckAuthStatus();
   const [message, setMessage] = useState({ title: '', text: '' });
+  const [themes, setThemes] = useState<IThemeResult[]>([]);
 
   useEffect(() => {
     if (userInfo) {
@@ -20,7 +20,19 @@ export const UserInfo = () => {
     }
   }, [userInfo]);
 
-  const sendMessage = async () => {
+  const getThemes = async () => {
+    const themes = await get<IThemes>(`/v1/messages/`);
+    if (themes.status === 200) {
+      setThemes(themes.data.results);
+    }
+    console.log(themes);
+  };
+
+  useEffect(() => {
+    getThemes();
+  }, []);
+
+  const createTheme = async () => {
     const data = await post(`/v1/messages/${UserIdService.getUserId()}/theme`, {
       ...message,
       userId: UserIdService.getUserId(),
@@ -44,7 +56,7 @@ export const UserInfo = () => {
       <span>{state.userInfo.email}</span>
       <span>{state.userInfo.id}</span>
       <span>{state.userInfo.role}</span>
-      {state.userInfo.messages.map((message, idx) => (
+      {themes.map((message, idx) => (
         <p key={idx}>
           {message.text} {message.title}
         </p>
@@ -64,7 +76,18 @@ export const UserInfo = () => {
         }}
       />
       <LogoutButton />
-      <button onClick={sendMessage}>send message</button>
+      <button onClick={createTheme}>send message</button>
     </div>
   );
 };
+
+interface IThemes {
+  results: IThemeResult[];
+}
+interface IThemeResult {
+  id: string;
+  messages: [];
+  text: string;
+  title: string;
+  userId: string;
+}
