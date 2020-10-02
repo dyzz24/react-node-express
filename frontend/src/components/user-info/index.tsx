@@ -40,7 +40,7 @@ export const UserInfo = () => {
 
   const createTheme = async () => {
     const data = await post<IThemeResult>(
-      `/v1/messages/${UserIdService.getUserId()}/theme`,
+      `/v1/messages/${UserIdService.getUserId()}/new-topic`,
       {
         ...message,
         userId: UserIdService.getUserId(),

@@ -15,6 +15,10 @@ const queryThemes = async () => {
   return themes;
 };
 
+const getThemeById = (id) => {
+  return Messages.findById(id);
+};
+
 //
 // /**
 //  * Query for users
@@ -94,4 +98,5 @@ const queryThemes = async () => {
 module.exports = {
   createNewTheme,
   queryThemes,
+  getThemeById,
 };

@@ -7,7 +7,7 @@ const messagesController = require("../../controllers/messages.controller");
 const router = express.Router();
 
 router
-  .route("/:userId/theme")
+  .route("/:userId/new-topic")
   .post(
     auth("getUsers"),
     validate(userValidation.getUser),
@@ -15,6 +15,8 @@ router
   );
 
 router.route("/").get(messagesController.getThemes);
+
+router.route("/forum-page/:themeId").get(messagesController.getThemeById);
 
 module.exports = router;
 

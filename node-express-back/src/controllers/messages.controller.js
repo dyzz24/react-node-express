@@ -2,6 +2,7 @@ const httpStatus = require("http-status");
 // const pick = require("../utils/pick");
 
 const catchAsync = require("../utils/catchAsync");
+const ApiError = require("../utils/ApiError");
 const { messagesService } = require("../services");
 
 const createNewTheme = catchAsync(async (req, res) => {
@@ -15,7 +16,16 @@ const getThemes = catchAsync(async (req, res) => {
   res.send(result);
 });
 
+const getThemeById = catchAsync(async (req, res) => {
+  const theme = await messagesService.getThemeById(req.params.themeId);
+  if (!theme) {
+    throw new ApiError(httpStatus.NOT_FOUND, "theme not found");
+  }
+  res.send(theme);
+});
+
 module.exports = {
   createNewTheme,
   getThemes,
+  getThemeById,
 };
