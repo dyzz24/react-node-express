@@ -45,10 +45,10 @@ export const UserInfo = () => {
 
   return (
     <div>
-      <span>{state.userInfo.name}</span>
-      <span>{state.userInfo.email}</span>
-      <span>{state.userInfo.id}</span>
-      <span>{state.userInfo.role}</span>
+      is active:
+      <span>{state.userInfo.name} </span>
+      <span>{state.userInfo.email} </span>
+      <span>{state.userInfo.role} </span>
       {themes.map((message, idx) => (
         <p key={idx}>
           {' '}
