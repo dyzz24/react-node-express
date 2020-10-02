@@ -39,7 +39,7 @@ export const LoginRegisterForm = () => {
   const [userData, setUserData] = useState<UserInfoType>(initState);
   const [responseStatus, setResponseStatus] = useState<string | undefined>('');
   const [formType, setFormType] = useState(FormTypes.LOGIN);
-  const { state, dispatch } = useContext(UserContext);
+  const { dispatch } = useContext(UserContext);
 
   const onInputChange = (
     e: ChangeEvent<HTMLInputElement>,

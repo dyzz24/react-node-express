@@ -25,11 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe457671-e905-44a2-8acd-0556c29f5cf8" name="Default Changelist" comment="">
+    <list default="true" id="fe457671-e905-44a2-8acd-0556c29f5cf8" name="Default Changelist" comment="configure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/login-register-forms/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/login-register-forms/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/use-check-auth-status/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/use-check-auth-status/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-express-back/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/services/auth.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601627932971</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="package">
+      <created>1601630400433</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1601630400433</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,7 +360,9 @@
     <MESSAGE value="front" />
     <MESSAGE value="added back" />
     <MESSAGE value="other files" />
-    <option name="LAST_COMMIT_MESSAGE" value="other files" />
+    <MESSAGE value="package" />
+    <MESSAGE value="configure" />
+    <option name="LAST_COMMIT_MESSAGE" value="configure" />
   </component>
   <component name="WindowStateProjectService">
     <state x="872" y="585" width="553" height="552" key="#ESLint" timestamp="1601630368443">
@@ -365,10 +374,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2946" y="539" width="559" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601374435180" />
-    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2" timestamp="1601627932899">
+    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2" timestamp="1601630936840">
       <screen x="0" y="360" width="1920" height="1080" />
     </state>
-    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601627932899" />
+    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601630936840" />
     <state x="2775" y="281" width="912" height="911" key="CommitChangelistDialog2/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601396355800" />
     <state x="100" y="460" width="1720" height="880" key="DiffContextDialog" timestamp="1601623368874">
       <screen x="0" y="360" width="1920" height="1080" />
@@ -384,10 +393,10 @@
     </state>
     <state x="604" y="636" width="900" height="737" key="SettingsEditor/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601629128526" />
     <state x="2725" y="368" width="1022" height="737" key="SettingsEditor/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601392132991" />
-    <state x="755" y="714" width="588" height="522" key="find.popup" timestamp="1601623173410">
+    <state x="755" y="714" width="588" height="522" key="find.popup" timestamp="1601630565075">
       <screen x="0" y="360" width="1920" height="1080" />
     </state>
-    <state x="755" y="714" width="588" height="522" key="find.popup/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601623173410" />
+    <state x="755" y="714" width="588" height="522" key="find.popup/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601630565075" />
     <state x="2927" y="472" width="618" height="522" key="find.popup/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601387582383" />
     <state x="600" y="743" width="720" height="321" key="git4idea.ui.GitTagDialog" timestamp="1601623514149">
       <screen x="0" y="360" width="1920" height="1080" />

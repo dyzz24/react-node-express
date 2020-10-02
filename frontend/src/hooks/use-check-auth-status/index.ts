@@ -1,16 +1,11 @@
 import { useEffect, useState } from 'react';
 import { IToken, TokenService } from '../../service/token';
 import { get, post } from '../../http';
-import {
-  IGlobalResponse,
-  ITokens,
-  IUser,
-} from '../../components/login-register-forms';
+import { IUser } from '../../components/login-register-forms';
 import { UserIdService } from '../../service/user-id';
 
 const getUserInfo = async () => {
-  const data = await get<IUser>(`/v1/users/${TokenService.getUserId()}`);
-  return data;
+  return await get<IUser>(`/v1/users/${TokenService.getUserId()}`);
 };
 
 export const useCheckAuthStatus = () => {
