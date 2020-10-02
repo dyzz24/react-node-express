@@ -10,6 +10,7 @@ const createNewTheme = async (themeObject) => {
 
 const queryThemes = async () => {
   // const themes = await Messages.paginate(filter, options);
+  // await mongoose.model("Messages").remove();
   const themes = await Messages.find({});
   return themes;
 };

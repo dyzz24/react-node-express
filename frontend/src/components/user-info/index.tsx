@@ -32,11 +32,15 @@ export const UserInfo = () => {
   }, []);
 
   const createTheme = async () => {
-    const data = await post(`/v1/messages/${UserIdService.getUserId()}/theme`, {
-      ...message,
-      userId: UserIdService.getUserId(),
-      userName: state.userInfo.name,
-    });
+    const data = await post<IThemeResult>(
+      `/v1/messages/${UserIdService.getUserId()}/theme`,
+      {
+        ...message,
+        userId: UserIdService.getUserId(),
+        userName: state.userInfo.name,
+      }
+    );
+    setThemes([...themes, data.data]);
   };
 
   return (
@@ -47,7 +51,11 @@ export const UserInfo = () => {
       <span>{state.userInfo.role}</span>
       {themes.map((message, idx) => (
         <p key={idx}>
-          {message.text} {message.title}
+          {' '}
+          сообщение: {message.text} тема: {message.title} автор:{' '}
+          {message.userName} дата создания:{' '}
+          {message.createdDate &&
+            message.createdDate.replace('(Coordinated Universal Time)', '')}
         </p>
       ))}
       <input
@@ -76,4 +84,6 @@ interface IThemeResult {
   text: string;
   title: string;
   userId: string;
+  userName: string;
+  createdDate: string;
 }
