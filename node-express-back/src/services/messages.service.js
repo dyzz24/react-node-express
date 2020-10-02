@@ -2,13 +2,15 @@ const { Messages } = require("../models");
 
 const createNewTheme = async (themeObject) => {
   const newTheme = await Messages.create(themeObject);
-  newTheme.createdDate = new Date();
-  newTheme.messages = [];
-  return newTheme;
+  const elemInBD = await Messages.findById(newTheme._id);
+  elemInBD.createdDate = newTheme.createdAt;
+  await elemInBD.save();
+  return elemInBD;
 };
 
-const queryThemes = async (filter, options) => {
-  const themes = await Messages.paginate(filter, options);
+const queryThemes = async () => {
+  // const themes = await Messages.paginate(filter, options);
+  const themes = await Messages.find({});
   return themes;
 };
 

@@ -1,5 +1,5 @@
 const httpStatus = require("http-status");
-const pick = require("../utils/pick");
+// const pick = require("../utils/pick");
 
 const catchAsync = require("../utils/catchAsync");
 const { messagesService } = require("../services");
@@ -9,9 +9,9 @@ const createNewTheme = catchAsync(async (req, res) => {
   res.status(httpStatus.CREATED).send(newTheme);
 });
 const getThemes = catchAsync(async (req, res) => {
-  const filter = pick(req.query, ["name", "role"]);
-  const options = pick(req.query, ["sortBy", "limit", "page"]);
-  const result = await messagesService.queryThemes(filter, options);
+  // const filter = pick(req.query, ["name", "role"]);
+  // const options = pick(req.query, ["sortBy", "limit", "page"]);
+  const result = await messagesService.queryThemes();
   res.send(result);
 });
 

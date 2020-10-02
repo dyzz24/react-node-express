@@ -22,6 +22,7 @@ const messagesSchema = mongoose.Schema(
     title: String,
     text: String,
     id: String,
+    createdDate: String,
   },
   {
     timestamps: true,
@@ -33,5 +34,4 @@ messagesSchema.plugin(toJSON);
 messagesSchema.plugin(paginate);
 
 const Messages = mongoose.model("Messages", messagesSchema);
-
 module.exports = Messages;

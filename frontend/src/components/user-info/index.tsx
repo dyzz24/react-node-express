@@ -21,11 +21,10 @@ export const UserInfo = () => {
   }, [userInfo]);
 
   const getThemes = async () => {
-    const themes = await get<IThemes>(`/v1/messages/`);
+    const themes = await get<IThemeResult[]>(`/v1/messages/`);
     if (themes.status === 200) {
-      setThemes(themes.data.results);
+      setThemes(themes.data);
     }
-    console.log(themes);
   };
 
   useEffect(() => {
@@ -38,17 +37,6 @@ export const UserInfo = () => {
       userId: UserIdService.getUserId(),
       userName: state.userInfo.name,
     });
-    // const data = await patch<IUser>(
-    //   `/v1/users/${UserIdService.getUserId()}/message`,
-    //   message
-    // );
-    //
-    // if (data.status === 200) {
-    //   dispatch({
-    //     type: UserActions.SET_USER_DATA,
-    //     payload: { ...state, userInfo: data.data },
-    //   });
-    // }
   };
 
   return (
@@ -82,9 +70,6 @@ export const UserInfo = () => {
   );
 };
 
-interface IThemes {
-  results: IThemeResult[];
-}
 interface IThemeResult {
   id: string;
   messages: [];
