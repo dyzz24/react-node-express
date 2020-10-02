@@ -4,6 +4,13 @@ import { useCheckAuthStatus } from '../../hooks/use-check-auth-status';
 import { get, post } from '../../http';
 import { UserIdService } from '../../service/user-id';
 import { LogoutButton } from '../logout-button';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+const CustomLink = styled(Link)`
+  display: block;
+  margin-bottom: 5px;
+`;
 
 export const UserInfo = () => {
   const { state, dispatch } = useContext(UserContext);
@@ -50,13 +57,13 @@ export const UserInfo = () => {
       <span>{state.userInfo.email} </span>
       <span>{state.userInfo.role} </span>
       {themes.map((message, idx) => (
-        <p key={idx}>
+        <CustomLink key={idx} to={`/theme/${message.id}`}>
           {' '}
           сообщение: {message.text} тема: {message.title} автор:{' '}
           {message.userName} дата создания:{' '}
           {message.createdDate &&
             message.createdDate.replace('(Coordinated Universal Time)', '')}
-        </p>
+        </CustomLink>
       ))}
       <input
         value={message.title}
