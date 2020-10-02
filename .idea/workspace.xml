@@ -25,11 +25,17 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe457671-e905-44a2-8acd-0556c29f5cf8" name="Default Changelist" comment="configure">
+    <list default="true" id="fe457671-e905-44a2-8acd-0556c29f5cf8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/node-express-back/src/controllers/messages.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-express-back/src/models/messages.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-express-back/src/routes/v1/messages.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node-express-back/src/services/messages.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/login-register-forms/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/login-register-forms/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/use-check-auth-status/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/use-check-auth-status/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-express-back/src/services/auth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/services/auth.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/user-info/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user-info/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-express-back/src/controllers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/controllers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-express-back/src/models/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/models/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-express-back/src/routes/v1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/routes/v1/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node-express-back/src/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/services/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +73,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
     <property name="js.linters.configure.manually.selectedeslint" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/node_modules/eslint/node_modules/.bin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/node-express-back/src/routes/v1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -86,8 +92,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/node-express-back/src/routes/v1" />
+      <recent name="$PROJECT_DIR$/node-express-back/src/controllers" />
+      <recent name="$PROJECT_DIR$/node-express-back/src/services" />
+      <recent name="$PROJECT_DIR$/node-express-back/src/models" />
       <recent name="$PROJECT_DIR$/backend" />
-      <recent name="$PROJECT_DIR$/frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -307,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601630400433</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="configure">
+      <created>1601630976979</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1601630976979</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,10 +390,10 @@
       <screen x="1920" y="0" width="2560" height="1440" />
     </state>
     <state x="2946" y="539" width="559" height="403" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601374435180" />
-    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2" timestamp="1601630936840">
+    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2" timestamp="1601630975275">
       <screen x="0" y="360" width="1920" height="1080" />
     </state>
-    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601630936840" />
+    <state x="641" y="571" width="912" height="684" key="CommitChangelistDialog2/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601630975275" />
     <state x="2775" y="281" width="912" height="911" key="CommitChangelistDialog2/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601396355800" />
     <state x="100" y="460" width="1720" height="880" key="DiffContextDialog" timestamp="1601623368874">
       <screen x="0" y="360" width="1920" height="1080" />

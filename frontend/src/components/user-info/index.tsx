@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserActions, UserContext } from '../../reducer';
 import { useCheckAuthStatus } from '../../hooks/use-check-auth-status';
-import { patch } from '../../http';
+import { patch, post } from '../../http';
 import { UserIdService } from '../../service/user-id';
 import { IUser } from '../login-register-forms';
 import { LogoutButton } from '../logout-button';
@@ -21,17 +21,21 @@ export const UserInfo = () => {
   }, [userInfo]);
 
   const sendMessage = async () => {
-    const data = await patch<IUser>(
-      `/v1/users/${UserIdService.getUserId()}/message`,
-      message
-    );
-
-    if (data.status === 200) {
-      dispatch({
-        type: UserActions.SET_USER_DATA,
-        payload: { ...state, userInfo: data.data },
-      });
-    }
+    const data = await post(`/v1/messages/${UserIdService.getUserId()}/theme`, {
+      ...message,
+      userId: UserIdService.getUserId(),
+    });
+    // const data = await patch<IUser>(
+    //   `/v1/users/${UserIdService.getUserId()}/message`,
+    //   message
+    // );
+    //
+    // if (data.status === 200) {
+    //   dispatch({
+    //     type: UserActions.SET_USER_DATA,
+    //     payload: { ...state, userInfo: data.data },
+    //   });
+    // }
   };
 
   return (
