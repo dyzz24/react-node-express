@@ -26,13 +26,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe457671-e905-44a2-8acd-0556c29f5cf8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-express-back/docker-compose.dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/docker-compose.dev.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +72,10 @@
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/frontend/node_modules/eslint" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.tslint" value="$PROJECT_DIR$/frontend/node_modules/tslint" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/frontend/node_modules/prettier" />
     <property name="run.prettier.on.save" value="true" />
@@ -86,12 +85,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/frontend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -357,10 +356,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="other files" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="872" y="585" width="553" height="552" key="#ESLint" timestamp="1601629080029">
+    <state x="872" y="585" width="553" height="552" key="#ESLint" timestamp="1601630368443">
       <screen x="0" y="360" width="1920" height="1080" />
     </state>
-    <state x="872" y="585" width="553" height="552" key="#ESLint/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601629080029" />
+    <state x="872" y="585" width="553" height="552" key="#ESLint/1920.0.2560.1440/0.360.1920.1080@0.360.1920.1080" timestamp="1601630368443" />
     <state x="3082" y="300" width="835" height="549" key="#ESLint/1920.0.2560.1440/0.360.1920.1080@1920.0.2560.1440" timestamp="1601392229131" />
     <state x="2946" y="539" width="559" height="403" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601374435180">
       <screen x="1920" y="0" width="2560" height="1440" />
