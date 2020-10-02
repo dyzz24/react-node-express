@@ -4,7 +4,6 @@ const createNewTheme = async (themeObject) => {
   const newTheme = await Messages.create(themeObject);
   newTheme.createdDate = new Date();
   newTheme.messages = [];
-  await Messages.save();
   return newTheme;
 };
 

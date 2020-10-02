@@ -36,6 +36,7 @@ export const UserInfo = () => {
     const data = await post(`/v1/messages/${UserIdService.getUserId()}/theme`, {
       ...message,
       userId: UserIdService.getUserId(),
+      userName: state.userInfo.name,
     });
     // const data = await patch<IUser>(
     //   `/v1/users/${UserIdService.getUserId()}/message`,
