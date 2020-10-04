@@ -24,8 +24,17 @@ const getThemeById = catchAsync(async (req, res) => {
   res.send(theme);
 });
 
+const getMessagesForCurrentTheme = catchAsync(async (req, res) => {
+  const messages = await messagesService.queryMessages(req.params.themeId);
+  if (!messages) {
+    throw new ApiError(httpStatus.NOT_FOUND, "messages not found");
+  }
+  res.send(messages);
+});
+
 module.exports = {
   createNewTheme,
   getThemes,
   getThemeById,
+  getMessagesForCurrentTheme,
 };

@@ -18,6 +18,10 @@ router.route("/").get(messagesController.getThemes);
 
 router.route("/forum-page/:themeId").get(messagesController.getThemeById);
 
+router
+  .route("/forum-page/messages/:themeId")
+  .get(messagesController.getMessagesForCurrentTheme);
+
 module.exports = router;
 
 /**

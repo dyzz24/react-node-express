@@ -9,6 +9,6 @@ const router = express.Router();
 router.use("/auth", authRoute);
 router.use("/users", userRoute);
 router.use("/docs", docsRoute);
-router.use("/messages", messagesRoute);
+router.use("/forum-pages", messagesRoute);
 
 module.exports = router;

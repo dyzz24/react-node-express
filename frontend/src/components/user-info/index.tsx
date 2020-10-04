@@ -28,7 +28,7 @@ export const UserInfo = () => {
   }, [userInfo]);
 
   const getThemes = async () => {
-    const themes = await get<IThemeResult[]>(`/v1/messages/`);
+    const themes = await get<IThemeResult[]>(`/v1/forum-pages/`);
     if (themes.status === 200) {
       console.log(themes);
       setThemes(themes.data);
@@ -41,7 +41,7 @@ export const UserInfo = () => {
 
   const createTheme = async () => {
     const data = await post<IThemeResult>(
-      `/v1/messages/${UserIdService.getUserId()}/new-topic`,
+      `/v1/forum-pages/${UserIdService.getUserId()}/new-topic`,
       {
         ...message,
         userId: UserIdService.getUserId(),

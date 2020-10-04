@@ -11,7 +11,6 @@ const messagesSchema = mongoose.Schema(
         title: String,
         text: String,
         createdDate: String,
-        userName: String,
       },
       {
         timestamps: true,

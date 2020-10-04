@@ -9,20 +9,34 @@ const createNewTheme = async (themeObject) => {
   return elemInBD;
 };
 
+const addUserFieldsToCurrentObject = async (noFieldsArray) => {
+  const users = await User.find({});
+  const modifiedData = noFieldsArray.map((data) => {
+    const currentUser = users.find((user) => user.id === data.userId);
+    return { ...data, userName: currentUser.name || null, id: data._id };
+  });
+  return modifiedData;
+};
+
 const queryThemes = async () => {
   // const forum-page = await Messages.paginate(filter, options);
   // await mongoose.model("Messages").remove();
   const themes = await Messages.find({}).lean();
-  const users = await User.find({});
-  const modifiedThemesData = themes.map((theme) => {
-    const currentUser = users.find((user) => user.id === theme.userId);
-    return { ...theme, userName: currentUser.name || null, id: theme._id };
-  });
+  const modifiedThemesData = addUserFieldsToCurrentObject(themes);
   return modifiedThemesData;
 };
 
-const getThemeById = (id) => {
-  return Messages.findById(id);
+const queryMessages = async (id) => {
+  const { messages } = await Messages.findById(id);
+  return messages;
+};
+
+const getThemeById = async (id) => {
+  const modifiedTheme = await Messages.findById(id).lean();
+  modifiedTheme.id = modifiedTheme._id;
+  delete modifiedTheme.messages;
+  delete modifiedTheme._id;
+  return modifiedTheme;
 };
 
 //
@@ -105,4 +119,5 @@ module.exports = {
   createNewTheme,
   queryThemes,
   getThemeById,
+  queryMessages,
 };
