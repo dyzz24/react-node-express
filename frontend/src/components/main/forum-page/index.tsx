@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouteMatch } from 'react-router';
 import { get, post } from '../../../http';
 import { NewMessage } from '../new-message';
@@ -6,17 +6,21 @@ import { NewMessage } from '../new-message';
 export const ForumPage = () => {
   const location = useRouteMatch();
   const { themeId } = location.params as { themeId: string };
-  const getForumPage = async () => {
+  const [messages, setMessages] = useState<IMessage[]>([]);
+  const getForumPageData = async () => {
     const data = await get(`/v1/forum-pages/forum-page/${themeId}`);
-    console.log(data);
   };
 
   const getForumMessages = async () => {
-    const data = await get(`/v1/forum-pages/forum-page/messages/${themeId}`);
-    console.log(data);
+    const data = await get<IMessage[]>(
+      `/v1/forum-pages/forum-page/messages/${themeId}`
+    );
+    if (data.status === 200) {
+      setMessages(data.data);
+    }
   };
   useEffect(() => {
-    getForumPage();
+    getForumPageData();
     getForumMessages();
   }, [themeId]);
 
@@ -24,6 +28,17 @@ export const ForumPage = () => {
     <div>
       i am forum page {themeId}
       <NewMessage themeId={themeId} />
+      {messages.map((elem) => (
+        <p key={elem.id}>{elem.text}</p>
+      ))}
     </div>
   );
 };
+
+interface IMessage {
+  text: string;
+  title: string;
+  userId: string;
+  userName: string;
+  id: string;
+}
