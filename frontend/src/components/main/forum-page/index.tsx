@@ -23,7 +23,7 @@ export const ForumPage = () => {
   return (
     <div>
       i am forum page {themeId}
-      <NewMessage />
+      <NewMessage themeId={themeId} />
     </div>
   );
 };

@@ -20,7 +20,8 @@ router.route("/forum-page/:themeId").get(messagesController.getThemeById);
 
 router
   .route("/forum-page/messages/:themeId")
-  .get(messagesController.getMessagesForCurrentTheme);
+  .get(messagesController.getMessagesForCurrentTheme)
+  .post(messagesController.addMessage);
 
 module.exports = router;
 

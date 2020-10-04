@@ -16,6 +16,14 @@ const getThemes = catchAsync(async (req, res) => {
   res.send(result);
 });
 
+const addMessage = catchAsync(async (req, res) => {
+  const thema = await messagesService.addNewMessage(
+    req.params.themeId,
+    req.body
+  );
+  res.send(thema.messages);
+});
+
 const getThemeById = catchAsync(async (req, res) => {
   const theme = await messagesService.getThemeById(req.params.themeId);
   if (!theme) {
@@ -37,4 +45,5 @@ module.exports = {
   getThemes,
   getThemeById,
   getMessagesForCurrentTheme,
+  addMessage,
 };

@@ -13,7 +13,11 @@ const addUserFieldsToCurrentObject = async (noFieldsArray) => {
   const users = await User.find({});
   const modifiedData = noFieldsArray.map((data) => {
     const currentUser = users.find((user) => user.id === data.userId);
-    return { ...data, userName: currentUser.name || null, id: data._id };
+    return {
+      ...data,
+      userName: currentUser && currentUser.name ? currentUser.name : null,
+      id: data._id,
+    };
   });
   return modifiedData || [];
 };
@@ -27,16 +31,23 @@ const queryThemes = async () => {
 };
 
 const queryMessages = async (id) => {
-  const { messages } = await Messages.findById(id);
+  const { messages } = await Messages.findById(id).lean();
   return addUserFieldsToCurrentObject(messages);
 };
 
-const getThemeById = async (id) => {
-  const modifiedTheme = await Messages.findById(id).lean();
+const getThemeById = async (themeId) => {
+  const modifiedTheme = await Messages.findById(themeId).lean();
   modifiedTheme.id = modifiedTheme._id;
   delete modifiedTheme.messages;
   delete modifiedTheme._id;
   return modifiedTheme;
+};
+
+const addNewMessage = async (themeId, messageBody) => {
+  const theme = await Messages.findById(themeId);
+  theme.messages = [...theme.messages, messageBody];
+  await theme.save();
+  return theme;
 };
 
 //
@@ -120,4 +131,5 @@ module.exports = {
   queryThemes,
   getThemeById,
   queryMessages,
+  addNewMessage,
 };
