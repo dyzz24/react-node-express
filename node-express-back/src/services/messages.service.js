@@ -15,7 +15,7 @@ const addUserFieldsToCurrentObject = async (noFieldsArray) => {
     const currentUser = users.find((user) => user.id === data.userId);
     return { ...data, userName: currentUser.name || null, id: data._id };
   });
-  return modifiedData;
+  return modifiedData || [];
 };
 
 const queryThemes = async () => {
@@ -28,7 +28,7 @@ const queryThemes = async () => {
 
 const queryMessages = async (id) => {
   const { messages } = await Messages.findById(id);
-  return messages;
+  return addUserFieldsToCurrentObject(messages);
 };
 
 const getThemeById = async (id) => {
