@@ -1,4 +1,5 @@
-const { Messages } = require("../models");
+// const mongoose = require("mongoose");
+const { Messages, User } = require("../models");
 
 const createNewTheme = async (themeObject) => {
   const newTheme = await Messages.create(themeObject);
@@ -11,8 +12,13 @@ const createNewTheme = async (themeObject) => {
 const queryThemes = async () => {
   // const forum-page = await Messages.paginate(filter, options);
   // await mongoose.model("Messages").remove();
-  const themes = await Messages.find({});
-  return themes;
+  const themes = await Messages.find({}).lean();
+  const users = await User.find({});
+  const modifiedThemesData = themes.map((theme) => {
+    const currentUser = users.find((user) => user.id === theme.userId);
+    return { ...theme, userName: currentUser.name || null, id: theme._id };
+  });
+  return modifiedThemesData;
 };
 
 const getThemeById = (id) => {

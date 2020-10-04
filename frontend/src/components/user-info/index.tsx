@@ -30,6 +30,7 @@ export const UserInfo = () => {
   const getThemes = async () => {
     const themes = await get<IThemeResult[]>(`/v1/messages/`);
     if (themes.status === 200) {
+      console.log(themes);
       setThemes(themes.data);
     }
   };
@@ -44,10 +45,10 @@ export const UserInfo = () => {
       {
         ...message,
         userId: UserIdService.getUserId(),
-        userName: state.userInfo.name,
       }
     );
-    setThemes([...themes, data.data]);
+
+    if (data.status < 400) setThemes([...themes, data.data]);
   };
 
   return (
@@ -56,15 +57,14 @@ export const UserInfo = () => {
       <span>{state.userInfo.name} </span>
       <span>{state.userInfo.email} </span>
       <span>{state.userInfo.role} </span>
-      {themes.map((message, idx) => (
-        <CustomLink key={idx} to={`/theme/${message.id}`}>
-          {' '}
-          сообщение: {message.text} тема: {message.title} автор:{' '}
-          {message.userName} дата создания:{' '}
-          {message.createdDate &&
-            message.createdDate.replace('(Coordinated Universal Time)', '')}
-        </CustomLink>
-      ))}
+      {themes.length > 0 &&
+        themes.map((message, idx) => (
+          <CustomLink key={idx} to={`/theme/${message.id}`}>
+            {' '}
+            сообщение: {message.text} тема: {message.title} автор:{' '}
+            {message.userName} дата создания: {message.createdDate}
+          </CustomLink>
+        ))}
       <input
         value={message.title}
         onChange={(e) => {

@@ -18,7 +18,6 @@ const messagesSchema = mongoose.Schema(
       },
     ],
     userId: String,
-    userName: String,
     title: String,
     text: String,
     id: String,
