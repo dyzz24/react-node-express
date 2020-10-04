@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { UserActions, UserContext } from '../../reducer';
-import { useCheckAuthStatus } from '../../hooks/use-check-auth-status';
+
 import { get, post } from '../../http';
 import { UserIdService } from '../../service/user-id';
 import { LogoutButton } from '../logout-button';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { UserContext } from '../../reducer';
 
 const CustomLink = styled(Link)`
   display: block;
@@ -13,19 +13,9 @@ const CustomLink = styled(Link)`
 `;
 
 export const UserInfo = () => {
-  const { state, dispatch } = useContext(UserContext);
-  const { userInfo } = useCheckAuthStatus();
   const [message, setMessage] = useState({ title: '', text: '' });
   const [themes, setThemes] = useState<IThemeResult[]>([]);
-
-  useEffect(() => {
-    if (userInfo) {
-      dispatch({
-        type: UserActions.SET_USER_DATA,
-        payload: { isAuthorized: true, userInfo },
-      });
-    }
-  }, [userInfo]);
+  const { state } = useContext(UserContext);
 
   const getThemes = async () => {
     const themes = await get<IThemeResult[]>(`/v1/forum-pages/`);
