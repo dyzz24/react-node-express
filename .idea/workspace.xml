@@ -26,13 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe457671-e905-44a2-8acd-0556c29f5cf8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/main/new-message/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/main/forum-page/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/main/forum-page/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/user-info/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/user-info/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/main/new-message/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/main/new-message/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node-express-back/src/controllers/messages.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/controllers/messages.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-express-back/src/models/messages.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/models/messages.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node-express-back/src/routes/v1/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/routes/v1/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node-express-back/src/routes/v1/messages.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/routes/v1/messages.route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node-express-back/src/services/messages.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/node-express-back/src/services/messages.service.js" afterDir="false" />
     </list>
