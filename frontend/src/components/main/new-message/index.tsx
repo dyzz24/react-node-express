@@ -11,10 +11,13 @@ export const NewMessage: React.FC<{ themeId: string }> = ({ themeId }) => {
   };
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = await post(`/v1/forum-pages/forum-page/messages/${themeId}`, {
-      ...message,
-      userId: UserIdService.getUserId(),
-    });
+    const data = await post(
+      `/v1/forum-pages/forum-page/messages/${UserIdService.getUserId()}`,
+      {
+        ...message,
+        themeId,
+      }
+    );
   };
 
   return (

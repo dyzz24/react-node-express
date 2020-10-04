@@ -43,8 +43,8 @@ const getThemeById = async (themeId) => {
   return modifiedTheme;
 };
 
-const addNewMessage = async (themeId, messageBody) => {
-  const theme = await Messages.findById(themeId);
+const addNewMessage = async (messageBody) => {
+  const theme = await Messages.findById(messageBody.themeId);
   theme.messages = [...theme.messages, messageBody];
   await theme.save();
   return theme;

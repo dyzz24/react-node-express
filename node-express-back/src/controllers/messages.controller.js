@@ -17,11 +17,8 @@ const getThemes = catchAsync(async (req, res) => {
 });
 
 const addMessage = catchAsync(async (req, res) => {
-  const thema = await messagesService.addNewMessage(
-    req.params.themeId,
-    req.body
-  );
-  res.send(thema.messages);
+  const theme = await messagesService.addNewMessage(req.body);
+  res.send(theme.messages);
 });
 
 const getThemeById = catchAsync(async (req, res) => {
